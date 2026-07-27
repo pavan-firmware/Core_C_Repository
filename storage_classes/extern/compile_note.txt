@@ -1,0 +1,4 @@
+Note : compile both files at a time
+
+gcc Topic_1_extern_storage_class.c globals.c -o Topic_1_extern_storage_class
+./Topic_1_extern_storage_class 
