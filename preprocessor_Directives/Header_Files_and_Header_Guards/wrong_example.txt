@@ -1,0 +1,44 @@
+Examples of what NOT to do
+
+1. Function definition inside header
+
+// bad.h
+void test(void)
+{
+}
+
+Reason:
+Every .c file including bad.h creates another copy of test().
+Linker reports multiple definition.
+
+------------------------------------------------
+
+2. No Header Guard
+
+struct Student
+{
+    int id;
+};
+
+Including twice causes:
+redefinition of struct Student
+
+------------------------------------------------
+
+3. Wrong Guard
+
+#ifndef GPIO_H
+#define UART_H
+
+Wrong because names do not match.
+
+------------------------------------------------
+
+4. Correct Guard
+
+#ifndef GPIO_H
+#define GPIO_H
+
+...
+
+#endif

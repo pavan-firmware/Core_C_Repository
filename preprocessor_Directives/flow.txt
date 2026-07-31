@@ -1,0 +1,29 @@
+main.c
+   │
+   ▼
+Preprocessor
+   │
+   ▼
+Expanded C source
+   │
+   ▼
+Compiler
+   │
+   ▼
+Assembly
+   │
+   ▼
+Assembler
+   │
+   ▼
+Object File
+   │
+   ▼
+Linker
+   │
+   ▼
+Executable
+
+
+Note:
+If a macro gives an unexpected result: gcc -E main.c
